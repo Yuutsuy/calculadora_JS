@@ -51,8 +51,8 @@
             }else{
                 alert('A divisão de '+ x + ' ÷ ' + y + ' é igual a: ' + div(x, y));
             }
+            alert(continuar());
         }
-        alert(continuar());
 
     }else if(pergunta === 'p') {
         var x = Number(prompt('Digite a porcentagem:'));
@@ -72,6 +72,6 @@
         }
 
         alert(x);
+        alert(continuar());
     }
-    alert(continuar());
 }
