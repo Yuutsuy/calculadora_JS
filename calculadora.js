@@ -1,4 +1,7 @@
 {
+    // Autor: João Matheus
+    // Créditos: Juliana
+
     // definindo função de soma
     var soma = function(x, y) {
         var result_soma = (x + y);
