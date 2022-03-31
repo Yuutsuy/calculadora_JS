@@ -1,17 +1,4 @@
 {
-    // definindo função de pergunta para continuar o programa
-    var continuar = function() { // Funcão de pergunta para continuar o programa
-        var continuar0 = prompt('Deseja continuar? s/n');
-
-        if(continuar0 === 'n') { // condição de parar o programa
-            alert('O processo foi encerrado');
-        }else if(continuar0 === 's'){ // condição de continuar o programa 
-            alert('Continuando o processo');
-        }else{ // condição que repete a pergunta caso o usuário escreva errado ou algo diferente
-                alert('Comando não reconhecido');
-                alert(continuar());
-        }
-    }
     // definindo função de soma
     var soma = function(x, y) {
         var result_soma = (x + y);
@@ -32,6 +19,20 @@
         var result_div = (x / y);
         return result_div;
     }
+    // definindo função de pergunta para continuar o programa
+    var continuar = function() { // Funcão de pergunta para continuar o programa
+        
+        var continuar = prompt('Deseja continuar? s/n');
+
+        if(continuar === 'n') { // condição de parar o programa
+            alert('O processo foi encerrado');
+        }else if(continuar === 's'){ // condição de continuar o programa 
+            alert('Continuando o processo');
+        }else{ // condição que repete a pergunta caso o usuário escreva errado ou algo diferente
+            alert('Comando não reconhecido');
+            continuar();
+        }
+    }
 
     var pergunta = prompt('Qual calculo você deseja fazer? (Digite EXATAMENTE o que está entre parenteses a seguir):\nBásico(b)\nPorcentagem(p)\nMédia Aritmética(ma)\nMédia Ponderada(mp))');
 
@@ -51,7 +52,7 @@
             }else{
                 alert('A divisão de '+ x + ' ÷ ' + y + ' é igual a: ' + div(x, y));
             }
-            alert(continuar());
+            continuar();
         }
 
     }else if(pergunta === 'p') {
@@ -61,7 +62,7 @@
         var multiplicado = mult(x, y);
         var result_final = div(multiplicado, 100);
         alert('A porcentagem de ' + x + ' do valor ' + y + ' é: ' + result_final);
-        alert(continuar());
+        continuar();
 
     }else if(pergunta === 'ma') {
         var x = [];
@@ -72,6 +73,6 @@
         }
 
         alert(x);
-        alert(continuar());
+        continuar();
     }
 }
