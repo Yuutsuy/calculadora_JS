@@ -1,7 +1,6 @@
 {
     // definindo função de pergunta para continuar o programa
     var continuar = function() { // Funcão de pergunta para continuar o programa
-        var cont = Number(0);
         var continuar0 = prompt('Deseja continuar? s/n');
 
         if(continuar0 === 'n') { // condição de parar o programa
@@ -9,13 +8,10 @@
         }else if(continuar0 === 's'){ // condição de continuar o programa 
             alert('Continuando o processo');
         }else{ // condição que repete a pergunta caso o usuário escreva errado ou algo diferente
-            for(i=-1;i < cont;i++) {
                 alert('Comando não reconhecido');
                 alert(continuar());
-            }
         }
     }
-    alert(continuar());
     // definindo função de soma
     var soma = function(x, y) {
         var result_soma = (x + y);
@@ -56,6 +52,7 @@
                 alert('A divisão de '+ x + ' ÷ ' + y + ' é igual a: ' + div(x, y));
             }
         }
+        alert(continuar());
 
     }else if(pergunta === 'p') {
         var x = Number(prompt('Digite a porcentagem:'));
@@ -64,6 +61,7 @@
         var multiplicado = mult(x, y);
         var result_final = div(multiplicado, 100);
         alert('A porcentagem de ' + x + ' do valor ' + y + ' é: ' + result_final);
+        alert(continuar());
 
     }else if(pergunta === 'ma') {
         var x = [];
@@ -75,4 +73,5 @@
 
         alert(x);
     }
+    alert(continuar());
 }
