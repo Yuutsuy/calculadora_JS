@@ -1,6 +1,7 @@
 {
     // definindo função de pergunta para continuar o programa
     var continuar = function() { // Funcão de pergunta para continuar o programa
+        var cont = Number(0);
         var continuar0 = prompt('Deseja continuar? s/n');
 
         if(continuar0 === 'n') { // condição de parar o programa
@@ -8,10 +9,13 @@
         }else if(continuar0 === 's'){ // condição de continuar o programa 
             alert('Continuando o processo');
         }else{ // condição que repete a pergunta caso o usuário escreva errado ou algo diferente
-            alert('Comando não reconhecido');
-            alert(continuar());
+            for(i=-1;i < cont;i++) {
+                alert('Comando não reconhecido');
+                alert(continuar());
+            }
         }
     }
+    alert(continuar());
     // definindo função de soma
     var soma = function(x, y) {
         var result_soma = (x + y);
@@ -33,7 +37,7 @@
         return result_div;
     }
 
-    var pergunta = prompt('Qual calculo você deseja fazer? (Digite o que está entre parenteses a seguir):\nBásico(b)\nPorcentagem(p)\nMédia Aritmética(ma)\nMédia Ponderada(mp))');
+    var pergunta = prompt('Qual calculo você deseja fazer? (Digite EXATAMENTE o que está entre parenteses a seguir):\nBásico(b)\nPorcentagem(p)\nMédia Aritmética(ma)\nMédia Ponderada(mp))');
 
     if(pergunta === 'b') {
         var x = Number(prompt('Digite o primeiro valor:'));
@@ -53,12 +57,22 @@
             }
         }
 
-    }else if (pergunta === 'p') {
+    }else if(pergunta === 'p') {
         var x = Number(prompt('Digite a porcentagem:'));
         var y = Number(prompt('Digite o valor para a porcentagem:'));
 
         var multiplicado = mult(x, y);
         var result_final = div(multiplicado, 100);
-        alert('A porcentagem de ' + x + ' do valor ' + y + ' é: ' + result_final)
+        alert('A porcentagem de ' + x + ' do valor ' + y + ' é: ' + result_final);
+
+    }else if(pergunta === 'ma') {
+        var x = [];
+        var quant_Num = Number(prompt('Digite a quantidade de números desejados'));
+
+        for(i=0;i < quant_Num;i++) {
+            var x = [prompt('Digite o numero:' + i)];
+        }
+
+        alert(x);
     }
 }
