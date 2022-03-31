@@ -26,11 +26,8 @@
 
         if(continuar === 'n') { // condição de parar o programa
             alert('O processo foi encerrado');
-        }else if(continuar === 's'){ // condição de continuar o programa 
+        }else{ // condição de continuar o programa 
             alert('Continuando o processo');
-        }else{ // condição que repete a pergunta caso o usuário escreva errado ou algo diferente
-            alert('Comando não reconhecido');
-            continuar();
         }
     }
 
@@ -52,8 +49,8 @@
             }else{
                 alert('A divisão de '+ x + ' ÷ ' + y + ' é igual a: ' + div(x, y));
             }
-            continuar();
         }
+        continuar();
 
     }else if(pergunta === 'p') {
         var x = Number(prompt('Digite a porcentagem:'));
@@ -68,11 +65,12 @@
         var x = [];
         var quant_Num = Number(prompt('Digite a quantidade de números desejados'));
 
-        for(i=0;i < quant_Num;i++) {
-            var x = [prompt('Digite o numero:' + i)];
+        for(i = 0;i < quant_Num;i++) {
+            var y = (prompt('Digite o ' + (i+1) + '° numero:'));
+            x.push(y);
+            if(x.length == 2){
+                soma(x, y);
+            }
         }
-
-        alert(x);
-        continuar();
     }
 }
